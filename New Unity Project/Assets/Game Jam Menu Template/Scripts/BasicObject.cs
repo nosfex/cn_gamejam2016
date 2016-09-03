@@ -22,8 +22,8 @@ public class BasicObject : MonoBehaviour {
 	{
 		Debug.Log (" destrui ");
 
-        
-            anim.SetTrigger(BreakHash);
+
+        anim.SetFloat("Speed", 1);
         
 
        
@@ -34,12 +34,12 @@ public class BasicObject : MonoBehaviour {
 	{
 
 		Debug.Log (" arregle ");
-       
-            anim.SetTrigger(FixHash);
-        
-		
 
-	}
+        anim.SetFloat("Speed", 0);
+
+
+
+    }
 
 
 
