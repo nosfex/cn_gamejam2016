@@ -62,6 +62,8 @@ public class Player : MonoBehaviour
 
     public void stun()
     { 
+
+        
         if(stunned == false && currStun <= 0.0f)
             stunned = true;
     }
@@ -121,9 +123,14 @@ public class Player : MonoBehaviour
 
             if (Mathf.Abs(this.towards.sqrMagnitude) < Mathf.Abs(enemy.towards.sqrMagnitude))
             {
-                if (enemy.playerID == 0) enemy.push(direction, playerID);
-                if (enemy.playerID == 1)
+                if (enemy.playerID == 1) enemy.push(direction, playerID);
+                if (enemy.playerID == 0)
+                {
                     enemy.stun();
+
+                    // gh: check who is stunning who
+                    Debug.Log("stunning the foe");
+                }
             }
         }
     }
