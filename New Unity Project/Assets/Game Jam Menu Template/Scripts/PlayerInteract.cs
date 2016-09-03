@@ -4,8 +4,13 @@ using System.Collections;
 public class PlayerInteract : MonoBehaviour {
 
 
+    public int playerID;
+
+
 	// Use this for initialization
 	void Start () {
+
+        playerID = gameObject.GetComponent<Player>().playerID;
 	
 	}
 	
@@ -15,13 +20,21 @@ public class PlayerInteract : MonoBehaviour {
 	
 	
 	}
-	void OnCollisionEnter (Collision col)
+	void OnCollisionEnter2D (Collision2D col)
 	{
 
 		Debug.Log (" toque algo ");
-		if(col.gameObject.tag=="object")
+		if(col.gameObject.tag=="Object")
 		{
-			col.gameObject.GetComponent<BasicObject> ().BreakObject ();
+            if (playerID==1) {
+
+                col.gameObject.GetComponent<BasicObject>().BreakObject();
+
+            } else if (playerID == 0) {
+
+                col.gameObject.GetComponent<BasicObject>().FixObject();
+            }
+		
 		}
 	}
 
