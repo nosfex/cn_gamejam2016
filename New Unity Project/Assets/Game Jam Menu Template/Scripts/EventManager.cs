@@ -15,7 +15,7 @@ public class EventManager : MonoBehaviour
 
     public static bool inputEnabled = false;
 
-    public static float time = 10.0f;
+    public static float time = 60.0f;
 
 
     public GameObject[] destructables;

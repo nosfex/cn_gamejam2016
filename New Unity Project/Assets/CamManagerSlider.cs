@@ -19,6 +19,10 @@ public class CamManagerSlider : MonoBehaviour
     }
     public void CamScroler()
     {
-        myCamera.gameObject.transform.position = new Vector3((Good.gameObject.transform.position.x + Bad.gameObject.transform.position.x) / 2, myCamera.gameObject.transform.position.y, myCamera.gameObject.transform.position.z);
+        float x = (Good.gameObject.transform.position.x + Bad.gameObject.transform.position.x) / 2;
+
+        x = Mathf.Clamp(x, 632.0f, 640.0f);
+        Vector3 midPoint = new Vector3(x, myCamera.gameObject.transform.position.y, myCamera.gameObject.transform.position.z);
+        myCamera.gameObject.transform.position = midPoint;
     }
 }
