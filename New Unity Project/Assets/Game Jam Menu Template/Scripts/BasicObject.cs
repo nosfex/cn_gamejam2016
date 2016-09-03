@@ -21,7 +21,12 @@ public class BasicObject : MonoBehaviour {
 	public void BreakObject()
 	{
 		Debug.Log (" destrui ");
-		//anim.SetTrigger (BreakHash);
+
+        
+            anim.SetTrigger(BreakHash);
+        
+
+       
 
 	}
 
@@ -29,8 +34,10 @@ public class BasicObject : MonoBehaviour {
 	{
 
 		Debug.Log (" arregle ");
-
-		//anim.SetTrigger (FixHash);
+       
+            anim.SetTrigger(FixHash);
+        
+		
 
 	}
 
