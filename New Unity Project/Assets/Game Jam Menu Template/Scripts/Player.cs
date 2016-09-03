@@ -30,7 +30,15 @@ public class Player : MonoBehaviour
     //GH: movement callback
     public float pushInvulTime = 2.0f;
     bool pushed = false;
-    
+
+    [Header("Salto")]
+    public float fuerzaDeSalto = 20;
+    public float gravedad = 100;
+    public bool yDelPisoAutomatica = true;
+    public float yDelPisoAMano = 185;
+    float yDelPisoSupongo = -1;//Lo agarro en base al start (podria ser una variable publica y ya)
+    float velocidadY = 0;
+
     public void moveX(int dir, int id)
     {
         if (id != playerID)
@@ -56,8 +64,23 @@ public class Player : MonoBehaviour
 
     public void jump(int id)
     {
+        Debug.Log("jump "+id);
         if (this.playerID != id)
             return;
+        if (stunned)
+        {
+            //Nada supongo?
+        }
+        else
+        {
+            if (transform.position.y <= yDelPisoSupongo)
+            {//Es como que, desconfio de el orden en que se ejecutan los eventos y las cosas
+                transform.position = new Vector3(transform.position.x,
+                    yDelPisoSupongo, transform.position.z);
+                towards.y = transform.position.y;
+                velocidadY = fuerzaDeSalto;
+            }
+        }
     }
 
     public void stun()
@@ -74,7 +97,28 @@ public class Player : MonoBehaviour
         EventManager.moveAction += moveX;
 
         EventManager.jumpAction += jump;
+
+        if (yDelPisoAutomatica) yDelPisoSupongo = transform.position.y;
+        else yDelPisoSupongo = yDelPisoAMano;
 	}
+
+    void ActualizarMovidasDeSalto()
+    {
+        transform.position = transform.position +
+            Vector3.up * velocidadY * Time.deltaTime;
+        towards.y = transform.position.y;
+        if (transform.position.y <= yDelPisoSupongo)
+        {
+            transform.position = new Vector3(transform.position.x,
+                yDelPisoSupongo, transform.position.z);
+            towards.y = transform.position.y;
+            velocidadY = 0;
+        }
+        else
+        {
+            velocidadY -= gravedad * Time.deltaTime;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -102,6 +146,8 @@ public class Player : MonoBehaviour
 
         // Gh: Move this actor
         this.transform.position = Vector3.MoveTowards(this.transform.position, towards, 0.359f);
+
+        ActualizarMovidasDeSalto();
 
         // GH: Modify the physics mods
         slideX = direction *  slideCoef;
