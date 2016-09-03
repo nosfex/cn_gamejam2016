@@ -56,9 +56,11 @@ public class EventManager : MonoBehaviour
             jumpAction(1);
         }
 
+
+        Debug.Log(Input.GetAxis("Fire3"));
         if (Input.GetAxis("Fire2") != 0)
         {
-            Debug.Log(Input.GetAxis("Fire2").ToString());
+            
         }
         if (Input.GetAxis("Fire3") <= -1)
         {
