@@ -7,6 +7,8 @@ public class BasicObject : MonoBehaviour {
 	int FixHash = Animator.StringToHash("Fix");
 	int BreakHash = Animator.StringToHash("Break");
 
+    public bool broken = false;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -21,7 +23,7 @@ public class BasicObject : MonoBehaviour {
 	public void BreakObject()
 	{
 		Debug.Log (" destrui ");
-
+        broken = true;
 
         anim.SetFloat("Speed", 1);
         
@@ -32,12 +34,10 @@ public class BasicObject : MonoBehaviour {
 
 	public void FixObject()
 	{
-
+        broken = false;
 		Debug.Log (" arregle ");
 
         anim.SetFloat("Speed", 0);
-
-
 
     }
 

@@ -20,7 +20,7 @@ public class PlayerInteract : MonoBehaviour {
 	
 	
 	}
-	void OnCollisionEnter2D (Collision2D col)
+	void OnTriggerEnter2D (Collider2D col)
 	{
 
 		Debug.Log (" toque algo ");
@@ -28,11 +28,11 @@ public class PlayerInteract : MonoBehaviour {
 		{
 
             Debug.Log(" es un objeto ");
-            if (playerID==1) {
+            if (playerID==0) {
                 Debug.Log(" Le digo q lo rompa ");
                 col.gameObject.GetComponent<BasicObject>().BreakObject();
 
-            } else if (playerID == 0) {
+            } else if (playerID == 1) {
                 Debug.Log(" Le digo q lo arregle");
                 col.gameObject.GetComponent<BasicObject>().FixObject();
             }

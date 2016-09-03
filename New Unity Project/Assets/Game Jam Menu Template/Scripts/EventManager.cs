@@ -15,10 +15,17 @@ public class EventManager : MonoBehaviour
 
     public static bool inputEnabled = false;
 
-	// Use this for initialization
-	void Start ()
+    public static float time = 10.0f;
+
+
+    public GameObject[] destructables;
+
+    public static int destroyedObjs = 0;
+    public static bool gameFinished = false;
+    public static bool StevenWon = false;
+    // Use this for initialization
+    void Start ()
     {
-	
 	}
 	
 	// Update is called once per frame
@@ -26,6 +33,24 @@ public class EventManager : MonoBehaviour
     {
         if (inputEnabled == false)
             return;
+        if (gameFinished)
+            return;
+        time -= Time.deltaTime;
+
+        if (time <= 0)
+        {
+            foreach (GameObject go in destructables)
+            {
+                BasicObject bo = go.GetComponent<BasicObject>();
+                if(bo.broken)
+                    destroyedObjs++;
+            }
+            if (destroyedObjs < destructables.Length / 2) StevenWon = true;
+
+            gameFinished = true;
+
+
+        }
         if (Input.GetAxis("Horizontal") <= -1)
         {
             moveAction(-1, 0);
