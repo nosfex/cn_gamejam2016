@@ -40,5 +40,18 @@ public class EventManager : MonoBehaviour
         {
             moveAction(1, 1);
         }
+
+
+        if(Input.GetAxis("Fire1") >= 1)
+        {
+            //Debug.Log(Input.GetAxis("Fire1"));
+            jumpAction(0);
+        }
+
+        if (Input.GetAxis("Fire1") <= 1)
+        {
+            //Debug.Log(Input.GetAxis("Fire1"));
+            jumpAction(1);
+        }
     }
 }
