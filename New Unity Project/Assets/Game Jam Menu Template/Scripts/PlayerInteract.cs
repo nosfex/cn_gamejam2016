@@ -26,12 +26,14 @@ public class PlayerInteract : MonoBehaviour {
 		Debug.Log (" toque algo ");
 		if(col.gameObject.tag=="Object")
 		{
-            if (playerID==1) {
 
+            Debug.Log(" es un objeto ");
+            if (playerID==1) {
+                Debug.Log(" Le digo q lo rompa ");
                 col.gameObject.GetComponent<BasicObject>().BreakObject();
 
             } else if (playerID == 0) {
-
+                Debug.Log(" Le digo q lo arregle");
                 col.gameObject.GetComponent<BasicObject>().FixObject();
             }
 		
