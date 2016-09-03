@@ -11,6 +11,7 @@ public class EventManager : MonoBehaviour
     public static event JumpAction jumpAction;
 
     public delegate void SpecialAction(int id);
+    public static event SpecialAction specialAction;
 
     public static bool inputEnabled = false;
 
@@ -46,7 +47,7 @@ public class EventManager : MonoBehaviour
         }
 
 
-        if(Input.GetAxis("Fire1") >= 1)
+        if(Input.GetAxis("Fire2") >= 1)
         {
             jumpAction(0);
         }
@@ -55,16 +56,14 @@ public class EventManager : MonoBehaviour
         {
             jumpAction(1);
         }
-
-
-        Debug.Log(Input.GetAxis("Fire3"));
-        if (Input.GetAxis("Fire2") != 0)
+        
+        if (Input.GetKey(KeyCode.Joystick1Button4))
         {
-            
+            specialAction(0);
         }
-        if (Input.GetAxis("Fire3") <= -1)
+        if (Input.GetKey(KeyCode.Joystick1Button5))
         {
-            Debug.Log("Player 1");
+            specialAction(1);
         }
     }
 }

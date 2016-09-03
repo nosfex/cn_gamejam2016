@@ -1,0 +1,280 @@
+fileFormatVersion: 2
+guid: 247266c3b0b876d45bcea15365da6a37
+timeCreated: 1472929798
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: steven_run_0
+    21300002: steven_run_1
+    21300004: steven_run_2
+    21300006: steven_run_3
+    21300008: steven_run_4
+    21300010: steven_run_5
+    21300012: steven_run_6
+    21300014: steven_run_7
+    21300016: steven_run_8
+    21300018: steven_run_9
+    21300020: steven_run_10
+    21300022: steven_run_11
+    21300024: steven_run_12
+    21300026: steven_run_13
+    21300028: steven_run_14
+    21300030: steven_run_15
+    21300032: steven_run_16
+    21300034: steven_run_17
+    21300036: steven_run_18
+    21300038: steven_run_19
+    21300040: steven_run_20
+    21300042: steven_run_21
+    21300044: steven_run_22
+    21300046: steven_run_23
+    21300048: steven_run_24
+    21300050: steven_run_25
+    21300052: steven_run_26
+    21300054: steven_run_27
+    21300056: steven_run_28
+    21300058: steven_run_29
+    21300060: steven_run_30
+    21300062: steven_run_31
+    21300064: steven_run_32
+    21300066: steven_run_33
+    21300068: steven_run_34
+    21300070: steven_run_35
+    21300072: steven_run_36
+    21300074: steven_run_37
+    21300076: steven_run_38
+    21300078: steven_run_39
+    21300080: steven_run_40
+    21300082: steven_run_41
+    21300084: steven_run_42
+    21300086: steven_run_43
+    21300088: steven_run_44
+    21300090: steven_run_45
+    21300092: steven_run_46
+    21300094: steven_run_47
+    21300096: steven_run_48
+    21300098: steven_run_49
+    21300100: steven_run_50
+    21300102: steven_run_51
+    21300104: steven_run_52
+    21300106: steven_run_53
+    21300108: steven_run_54
+    21300110: steven_run_55
+    21300112: steven_run_56
+    21300114: steven_run_57
+    21300116: steven_run_58
+    21300118: steven_run_59
+    21300120: steven_run_60
+    21300122: steven_run_61
+    21300124: steven_run_62
+    21300126: steven_run_63
+    21300128: steven_run_64
+    21300130: steven_run_65
+    21300132: steven_run_66
+    21300134: steven_run_67
+    21300136: steven_run_68
+    21300138: steven_run_69
+    21300140: steven_run_70
+    21300142: steven_run_71
+    21300144: steven_run_72
+    21300146: steven_run_73
+    21300148: steven_run_74
+    21300150: steven_run_75
+    21300152: steven_run_76
+    21300154: steven_run_77
+    21300156: steven_run_78
+    21300158: steven_run_79
+    21300160: steven_run_80
+    21300162: steven_run_81
+    21300164: steven_run_82
+    21300166: steven_run_83
+    21300168: steven_run_84
+    21300170: steven_run_85
+    21300172: steven_run_86
+    21300174: steven_run_87
+    21300176: steven_run_88
+    21300178: steven_run_89
+    21300180: steven_run_90
+    21300182: steven_run_91
+    21300184: steven_run_92
+    21300186: steven_run_93
+    21300188: steven_run_94
+    21300190: steven_run_95
+    21300192: steven_run_96
+    21300194: steven_run_97
+    21300196: steven_run_98
+    21300198: steven_run_99
+    21300200: steven_run_100
+    21300202: steven_run_101
+    21300204: steven_run_102
+    21300206: steven_run_103
+    21300208: steven_run_104
+    21300210: steven_run_105
+    21300212: steven_run_106
+    21300214: steven_run_107
+    21300216: steven_run_108
+    21300218: steven_run_109
+    21300220: steven_run_110
+    21300222: steven_run_111
+    21300224: steven_run_112
+    21300226: steven_run_113
+    21300228: steven_run_114
+    21300230: steven_run_115
+    21300232: steven_run_116
+    21300234: steven_run_117
+    21300236: steven_run_118
+    21300238: steven_run_119
+    21300240: steven_run_120
+    21300242: steven_run_121
+    21300244: steven_run_122
+    21300246: steven_run_123
+    21300248: steven_run_124
+    21300250: steven_run_125
+    21300252: steven_run_126
+    21300254: steven_run_127
+    21300256: steven_run_128
+    21300258: steven_run_129
+    21300260: steven_run_130
+    21300262: steven_run_131
+    21300264: steven_run_132
+    21300266: steven_run_133
+    21300268: steven_run_134
+    21300270: steven_run_135
+    21300272: steven_run_136
+    21300274: steven_run_137
+    21300276: steven_run_138
+    21300278: steven_run_139
+    21300280: steven_run_140
+    21300282: steven_run_141
+    21300284: steven_run_142
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: steven_run_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 264
+        height: 370
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: steven_run_1
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1
+        width: 214
+        height: 389
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: steven_run_2
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 57
+        width: 294
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: steven_run_3
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 0
+        width: 280
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: steven_run_4
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 2
+        width: 220
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: steven_run_5
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 57
+        width: 252
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

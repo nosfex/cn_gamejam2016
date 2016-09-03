@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
         if (id != playerID)
             return;
         direction = dir;
-        towards = new Vector3(transform.position.x  + ((moveDir.x * moveScale * direction) * (initFrictionCoef + curFriction) ), transform.position.y, transform.position.z);
+        //towards = new Vector3(transform.position.x  + ((moveDir.x * moveScale * direction) * (initFrictionCoef + curFriction) ), transform.position.y, transform.position.z);
         curFriction += Time.deltaTime * frictionScalar;
         slideX = 0;
         
@@ -90,6 +90,23 @@ public class Player : MonoBehaviour
         if(stunned == false && currStun <= 0.0f)
             stunned = true;
     }
+
+    void specialAction(int id)
+    {
+        if (id == playerID && playerID == 0)
+        {
+            Debug.Log("pokerat");
+        }
+    }
+
+    void stompBreak()
+    {
+
+    }
+
+    void lickFix()
+    {
+    }
     // Use this for initialization
 	void Start ()
     {
@@ -97,6 +114,8 @@ public class Player : MonoBehaviour
         EventManager.moveAction += moveX;
 
         EventManager.jumpAction += jump;
+
+        EventManager.specialAction += specialAction;
 
         if (yDelPisoAutomatica) yDelPisoSupongo = transform.position.y;
         else yDelPisoSupongo = yDelPisoAMano;
@@ -142,13 +161,13 @@ public class Player : MonoBehaviour
             currStun -= Time.deltaTime;
         }
         // GH: recalculate towards with the slide
-        towards = new Vector3(towards.x + slideX, towards.y, towards.z);
+        towards = new Vector3(((moveDir.x * moveScale * direction)  + slideX ) * Time.deltaTime, towards.y, towards.z);
 
         // Gh: Move this actor
-        this.transform.position = Vector3.MoveTowards(this.transform.position, towards, 0.359f);
+        this.transform.position = new Vector3(this.transform.position.x +  towards.x, this.transform.position.y, this.transform.position.z);
 
         ActualizarMovidasDeSalto();
-
+        direction = 0;
         // GH: Modify the physics mods
         slideX = direction *  slideCoef;
         slideCoef -= Time.deltaTime * (0.0053f) ;
@@ -166,18 +185,6 @@ public class Player : MonoBehaviour
         if (coll.gameObject.tag == "Player")
         {
             Player enemy = coll.gameObject.GetComponent<Player>();
-
-            if (Mathf.Abs(this.towards.sqrMagnitude) < Mathf.Abs(enemy.towards.sqrMagnitude))
-            {
-                if (enemy.playerID == 1) enemy.push(direction, playerID);
-                if (enemy.playerID == 0)
-                {
-                    enemy.stun();
-
-                    // gh: check who is stunning who
-                    Debug.Log("stunning the foe");
-                }
-            }
         }
     }
 }
