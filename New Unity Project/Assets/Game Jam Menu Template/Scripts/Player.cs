@@ -39,6 +39,8 @@ public class Player : MonoBehaviour
     float yDelPisoSupongo = -1;//Lo agarro en base al start (podria ser una variable publica y ya)
     float velocidadY = 0;
 
+    Animation animControl;
+
     public void moveX(int dir, int id)
     {
         if (id != playerID)
@@ -116,7 +118,8 @@ public class Player : MonoBehaviour
         EventManager.jumpAction += jump;
 
         EventManager.specialAction += specialAction;
-
+        animControl = GetComponent<Animation>();
+        //animControl.Play("jump");
         if (yDelPisoAutomatica) yDelPisoSupongo = transform.position.y;
         else yDelPisoSupongo = yDelPisoAMano;
 	}

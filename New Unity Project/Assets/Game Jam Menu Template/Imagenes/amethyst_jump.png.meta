@@ -1,9 +1,12 @@
 fileFormatVersion: 2
 guid: 682a5c93c9116244f81c1ceb7b18e9d9
-timeCreated: 1472995913
+timeCreated: 1472999293
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: amethyst_jump_0
+    21300002: amethyst_jump_1
+    21300004: amethyst_jump_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -51,7 +54,46 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: amethyst_jump_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 318
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amethyst_jump_1
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 41
+        width: 277
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amethyst_jump_2
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 17
+        width: 329
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 
